@@ -168,8 +168,10 @@
     const MyApp = () => {
     const [arrayTodo, setArrayTodo] = React.useState(todos);
 
-    const handleDeleteClick = (id) => {
-        const newTodos = arrayTodo.filter((item) => item.id !== id);
+    const handleDeleteClick = (e) => {
+      const newTodos = arrayTodo.filter(
+          item => item.id !== e.target.id
+        );
         setArrayTodo(newTodos);
     };
 
